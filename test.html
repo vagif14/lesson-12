@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Search box</title>
+    <style>
+        body {
+            background-color: #ee5253;
+            font-family: sans-serif;
+        }
+
+        .search {
+            background-color: #222f3e;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-txt,
+        .search-btn {
+            transition: 0.8s;
+            outline: none;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        .search-txt {
+            color: white;
+            width: 0;
+            float: left;
+        }
+
+        .search-btn {
+            border-radius: 40px;
+            color: #ee5253;
+            width: 40px;
+            height: 40px;
+        }
+
+        .search-btn:active {
+            background-color: rgba(255, 255, 255, .5);
+        }
+
+        .search:hover>.search-txt {
+            width: 200px;
+            padding: 10px;
+        }
+
+        .search:hover>.search-btn {
+            transform: rotate(360deg);
+        }
+
+        button::-moz-focus-inner {
+            border: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="search">
+        <input type="text" class="search-txt">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+</body>
+
+</html>
